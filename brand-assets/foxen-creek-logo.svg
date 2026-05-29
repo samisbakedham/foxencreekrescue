@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@500&amp;display=swap');
+    </style>
+  </defs>
+
+  <rect width="600" height="600" fill="#F2E4CE"/>
+
+  <g transform="translate(300 230)" fill="#B85439">
+    <ellipse cx="0" cy="30" rx="38" ry="30"/>
+    <ellipse cx="-34" cy="0" rx="11" ry="15"/>
+    <ellipse cx="-12" cy="-18" rx="11" ry="15"/>
+    <ellipse cx="12" cy="-18" rx="11" ry="15"/>
+    <ellipse cx="34" cy="0" rx="11" ry="15"/>
+  </g>
+
+  <text x="300" y="380" font-family="Fraunces, serif" font-size="54" font-weight="600" fill="#5C2818" text-anchor="middle" letter-spacing="-1">Foxen Creek</text>
+
+  <line x1="240" y1="400" x2="360" y2="400" stroke="#B85439" stroke-width="1.5"/>
+
+  <text x="300" y="430" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#8B3A26" text-anchor="middle" letter-spacing="8">RESCUE</text>
+</svg>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foxen Creek Rescue — Brand Kit</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --terracotta: #B85439;
+    --terracotta-deep: #8B3A26;
+    --bark: #5C2818;
+    --sand: #F2E4CE;
+    --sand-warm: #E8A56C;
+    --cream: #FAF1DF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--bark);
+    line-height: 1.6;
+    padding: 40px 24px;
+  }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  .hero {
+    text-align: center;
+    padding: 20px 0 40px;
+    border-bottom: 1px solid var(--terracotta);
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 500;
+    color: var(--bark);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  h1 em { font-style: italic; color: var(--terracotta); }
+
+  .tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--terracotta-deep);
+  }
+
+  section { padding: 48px 0; border-bottom: 1px solid rgba(184, 84, 57, 0.2); }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--bark);
+    margin-bottom: 8px;
+  }
+
+  .section-num {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .section-intro { color: var(--terracotta-deep); margin-bottom: 28px; font-size: 15px; }
+
+  /* Logo display - now with embedded SVG */
+  .logo-display {
+    background: var(--sand);
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .logo-mark {
+    display: inline-block;
+    max-width: 320px;
+    width: 100%;
+  }
+
+  /* Palette */
+  .palette-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .swatch {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .swatch .name { font-weight: 600; margin-bottom: 2px; }
+  .swatch .hex { opacity: 0.7; font-family: monospace; font-size: 10px; }
+  .sw-1 { background: var(--terracotta); color: var(--sand); }
+  .sw-2 { background: var(--terracotta-deep); color: var(--sand); }
+  .sw-3 { background: var(--bark); color: var(--sand); }
+  .sw-4 { background: var(--sand-warm); color: var(--bark); }
+  .sw-5 { background: var(--sand); color: var(--bark); border: 1px solid rgba(0,0,0,0.05); }
+
+  /* Type */
+  .type-block { padding: 20px; background: var(--sand); border-radius: 8px; margin-bottom: 14px; }
+  .type-label { font-size: 11px; letter-spacing: 3px; color: var(--terracotta); margin-bottom: 8px; }
+  .type-sample-display { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 500; color: var(--bark); line-height: 1.1; }
+  .type-sample-body { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--bark); }
+  .type-meta { font-size: 11px; color: var(--terracotta-deep); margin-top: 8px; font-family: monospace; }
+
+  /* Voice */
+  .voice-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 600px) { .voice-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+  .voice-col { padding: 16px 20px; border-left: 2px solid var(--terracotta); }
+  .voice-col h3 { font-family: 'Fraunces', serif; font-size: 18px; margin-bottom: 12px; color: var(--bark); }
+  .voice-col ul { list-style: none; }
+  .voice-col li { padding: 4px 0; font-size: 14px; }
+  .voice-col li::before { content: "— "; color: var(--terracotta); }
+
+  /* Instagram posts */
+  .post {
+    background: var(--sand);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(184, 84, 57, 0.3);
+    margin-bottom: 14px;
+  }
+  .post-num {
+    background: var(--terracotta);
+    color: var(--sand);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .post-type {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    color: var(--bark);
+    font-weight: 500;
+  }
+  .post-visual {
+    font-size: 12px;
+    color: var(--terracotta-deep);
+    background: var(--cream);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .post-visual strong { color: var(--terracotta); letter-spacing: 1px; font-size: 10px; }
+  .post-caption {
+    font-size: 14px;
+    color: var(--bark);
+    white-space: pre-line;
+    line-height: 1.55;
+  }
+
+  /* Steps */
+  .steps { counter-reset: step; }
+  .step {
+    padding: 18px 0 18px 50px;
+    position: relative;
+    border-bottom: 1px dashed rgba(184, 84, 57, 0.3);
+  }
+  .step:last-child { border-bottom: none; }
+  .step::before {
+    counter-increment: step;
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 18px;
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: var(--terracotta);
+    font-style: italic;
+  }
+  .step h3 { font-family: 'Fraunces', serif; font-size: 18px; color: var(--bark); margin-bottom: 6px; }
+  .step p { font-size: 13px; color: var(--terracotta-deep); }
+
+  footer {
+    text-align: center;
+    padding: 40px 0 0;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--terracotta);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <div class="eyebrow">Brand Kit · v1.1</div>
+    <h1>Foxen <em>Creek</em><br>Rescue</h1>
+    <div class="tagline">A small place for second chances on the Central Coast.</div>
+  </div>
+
+  <section>
+    <span class="section-num">01 · IDENTITY</span>
+    <h2>The Mark</h2>
+    <p class="section-intro">Simple paw + clean wordmark. Reads at any size — Instagram avatar, business card, embroidered patch.</p>
+    <div class="logo-display">
+      <svg class="logo-mark" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <rect width="600" height="600" fill="#F2E4CE"/>
+        <g transform="translate(300 230)" fill="#B85439">
+          <ellipse cx="0" cy="30" rx="38" ry="30"/>
+          <ellipse cx="-34" cy="0" rx="11" ry="15"/>
+          <ellipse cx="-12" cy="-18" rx="11" ry="15"/>
+          <ellipse cx="12" cy="-18" rx="11" ry="15"/>
+          <ellipse cx="34" cy="0" rx="11" ry="15"/>
+        </g>
+        <text x="300" y="380" font-family="Fraunces, Georgia, serif" font-size="54" font-weight="600" fill="#5C2818" text-anchor="middle" letter-spacing="-1">Foxen Creek</text>
+        <line x1="240" y1="400" x2="360" y2="400" stroke="#B85439" stroke-width="1.5"/>
+        <text x="300" y="430" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#8B3A26" text-anchor="middle" letter-spacing="8">RESCUE</text>
+      </svg>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-num">02 · PALETTE</span>
+    <h2>Colors of the canyon</h2>
+    <p class="section-intro">Terracotta as the accent. Bark for text. Sand as the canvas.</p>
+    <div class="palette-5">
+      <div class="swatch sw-1"><div class="name">TERRACOTTA</div><div class="hex">#B85439</div></div>
+      <div class="swatch sw-2"><div class="name">CLAY</div><div class="hex">#8B3A26</div></div>
+      <div class="swatch sw-3"><div class="name">BARK</div><div class="hex">#5C2818</div></div>
+      <div class="swatch sw-4"><div class="name">SUN</div><div class="hex">#E8A56C</div></div>
+      <div class="swatch sw-5"><div class="name">SAND</div><div class="hex">#F2E4CE</div></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-num">03 · TYPOGRAPHY</span>
+    <h2>How we read</h2>
+    <div class="type-block">
+      <div class="type-label">DISPLAY · HEADLINES</div>
+      <div class="type-sample-display">Every animal deserves home.</div>
+      <div class="type-meta">Fraunces — Google Fonts, free</div>
+    </div>
+    <div class="type-block">
+      <div class="type-label">BODY · CAPTIONS</div>
+      <div class="type-sample-body">Meet Juniper — a six-month-old shepherd mix found near Sisquoc. She loves slow mornings and people who let her lead the walk.</div>
+      <div class="type-meta">Inter — Google Fonts, free</div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-num">04 · VOICE</span>
+    <h2>How we sound</h2>
+    <div class="voice-grid">
+      <div class="voice-col">
+        <h3>We are</h3>
+        <ul>
+          <li>Warm, plainspoken, honest</li>
+          <li>Local — we know place names</li>
+          <li>About the animal, not us</li>
+          <li>Calm, never alarmist</li>
+          <li>Specific (names, ages, stories)</li>
+        </ul>
+      </div>
+      <div class="voice-col">
+        <h3>We aren't</h3>
+        <ul>
+          <li>Guilt-trippy or doomscrolly</li>
+          <li>Corporate or overly polished</li>
+          <li>Vague ("help animals in need")</li>
+          <li>Trend-chasing or meme-heavy</li>
+          <li>Performative — show the work</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-num">05 · INSTAGRAM</span>
+    <h2>First five posts</h2>
+    <p class="section-intro">Post 1 is your introduction. Posts 2–5 build trust by showing real work before you ever ask for anything.</p>
+
+    <div class="post">
+      <div class="post-header">
+        <div class="post-num">1</div>
+        <div class="post-type">The introduction (pinned)</div>
+      </div>
+      <div class="post-visual"><strong>VISUAL</strong> &nbsp; The logo on the sand background. Clean, no photo yet.</div>
+      <div class="post-caption">Hi — we're Foxen Creek Rescue.
+
+A small volunteer effort out on the Central Coast, helping dogs and cats find their next chapter. Named for the oak-shaded creek that winds through Santa Maria Valley ranch country — the kind of land that's always made room for one more.
+
+We're just getting started. No shelter, no staff — just a handful of fosters, a few good vets, and a lot of patience. Follow along as we meet the animals. We'll introduce them one at a time.
+
+🌿 Central Coast, CA
+📩 DMs open for fosters, vets, and good people</div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">
+        <div class="post-num">2</div>
+        <div class="post-type">Why we're here</div>
+      </div>
+      <div class="post-visual"><strong>VISUAL</strong> &nbsp; Landscape photo — oak hills, golden hour, no animals yet. Sets the brand world.</div>
+      <div class="post-caption">A few hundred animals come through county shelters here every month. Most find homes. Some need a little extra time — an older dog, a shy cat, a litter too young to adopt out.
+
+That's where small rescues come in. We're not trying to replace the shelters. We're trying to give the animals who need another week, or another month, somewhere to land.
+
+We're starting small on purpose. One foster home at a time. One vet partner at a time. One animal at a time.
+
+If that's a project you want to be part of — as a foster, a volunteer, or just someone who shares a post — we'd love to know you.</div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">
+        <div class="post-num">3</div>
+        <div class="post-type">The first animal</div>
+      </div>
+      <div class="post-visual"><strong>VISUAL</strong> &nbsp; Carousel: 3 photos of one specific animal. Soft natural light, no flash, no filters.</div>
+      <div class="post-caption">Meet [Name] 🌾
+
+[Age, breed mix, where they came from in one line. Example: "A two-year-old shepherd mix who came to us from county after his family moved."]
+
+What we know so far: [One specific detail that makes them real. Example: "He's gentle with everything — cats, kids, the foster's grandma. Scared of the vacuum. Loves a long sit in the sun."]
+
+He's with a foster in [town] while we figure out what he needs next. Not ready for adoption yet, but if you'd like to be on the list when he is, send us a message.
+
+#centralcoastrescue #santamariavalley</div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">
+        <div class="post-num">4</div>
+        <div class="post-type">Behind the scenes</div>
+      </div>
+      <div class="post-visual"><strong>VISUAL</strong> &nbsp; Phone photo from the vet visit — paws on the exam table, or the dog in the car after. Real and unposed.</div>
+      <div class="post-caption">Vet day for [Name] today.
+
+Clean bill of health, up to date on shots, scheduled for his neuter next week. Total bill: $[amount]. Covered by [name of vet partner or "an anonymous donor"] — the kind of help that makes any of this possible.
+
+This is most of what rescue actually looks like, by the way. Not dramatic saves. Just appointments, paperwork, and someone showing up on a Tuesday morning with a thermos of coffee.
+
+Grateful for the people who make it boring in the best way. 🌿</div>
+    </div>
+
+    <div class="post">
+      <div class="post-header">
+        <div class="post-num">5</div>
+        <div class="post-type">A specific ask</div>
+      </div>
+      <div class="post-visual"><strong>VISUAL</strong> &nbsp; The animal looking at the camera. Single photo. Eye contact.</div>
+      <div class="post-caption">We're looking for one thing this week: a foster home for a litter of four kittens coming in Friday.
+
+They're about six weeks old. Healthy, weaned, just need somewhere quiet for the next three weeks until they're old enough to spay/neuter and adopt out.
+
+We provide: food, litter, supplies, all vet care, and someone to text at 2am when you're worried.
+You provide: a spare bathroom or quiet room, and a soft spot for small loud creatures.
+
+Based on the Central Coast (Santa Maria / Orcutt / Lompoc / SB). DM us if you can help, or tag someone who could.</div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-num">06 · ROADMAP</span>
+    <h2>How to start (realistically)</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Decide the legal shape</h3>
+        <p>Start under an existing 501(c)(3)'s fiscal sponsorship — fastest, cheapest. Form your own nonprofit only if it grows past ~10 animals/year.</p>
+      </div>
+      <div class="step">
+        <h3>Partner before you house</h3>
+        <p>Volunteer with Santa Maria Valley Humane, SB Humane, or county Animal Services first. Don't take in animals until you have a foster network and a vet.</p>
+      </div>
+      <div class="step">
+        <h3>Lock the basics</h3>
+        <p>Grab the .org and IG / TikTok / Facebook handles tonight. Set up a Gmail. Keep an intake spreadsheet from day one.</p>
+      </div>
+      <div class="step">
+        <h3>Build the foster network</h3>
+        <p>Aim for 3–5 trusted foster homes before intake #1. One vet with a rescue rate is the highest-leverage relationship you can build.</p>
+      </div>
+      <div class="step">
+        <h3>Fundraise small and clear</h3>
+        <p>Venmo or Zeffy (free for nonprofits). Tie every ask to a number: "$80 covers Juniper's spay" beats "donate to our mission" every time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>FOXEN CREEK RESCUE · CENTRAL COAST · EST. 2026</footer>
+
+</div>
+</body>
+</html>
